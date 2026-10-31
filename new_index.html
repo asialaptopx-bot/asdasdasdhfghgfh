@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="fa" dir="rtl" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>Soheil Gate | Premium Proxy &amp; Gateway Panel</title>
+  <title>سایور | سامانه هوشمند کانفیگ و سابسکریپشن</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/سهیل/app.css">
   <link rel="icon" type="image/png" href="/سهیل/logo.png">
   <link rel="apple-touch-icon" href="/سهیل/logo.png">
-  <meta name="theme-color" content="#090d1a">
+  <meta name="theme-color" content="#0a0d14">
 </head>
 <body>
   <!-- Ambient background glow elements -->
   <div class="ambient-mesh" aria-hidden="true">
     <div class="glow-orb orb-primary"></div>
     <div class="glow-orb orb-accent"></div>
-    <div class="glow-orb orb-indigo"></div>
     <div class="mesh-overlay"></div>
   </div>
 
@@ -23,20 +25,15 @@
     <header class="app-header">
       <div class="header-container">
         <!-- Brand -->
-        <a href="#/home" class="brand-link" aria-label="Soheil Gate Home">
+        <a href="#/home" class="brand-link" aria-label="صفحه اصلی سایور">
           <div class="brand-avatar">
-            <img src="/سهیل/logo.png" alt="Logo" class="brand-avatar-img" onerror="this.style.display='none';var p=this.nextElementSibling;if(p)p.style.display='flex';">
-            <div class="brand-fallback-icon" style="display:none;">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
-            </div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="brand-svg-icon">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
           </div>
           <div class="brand-text">
-            <div class="brand-name">
-              <span class="name-highlight">Soheil</span> <span class="name-sub">Gate</span>
-            </div>
-            <div class="brand-tagline">Stream Without Limits</div>
+            <div class="brand-name">سایور</div>
+            <div class="brand-tagline">اتصال پرسرعت و پایدار</div>
           </div>
         </a>
 
@@ -47,7 +44,7 @@
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
               <polyline points="9 22 9 12 15 12 15 22"/>
             </svg>
-            <span>Home</span>
+            <span>صفحه اصلی</span>
           </a>
           <a href="#/subs" class="nav-tab" data-page="subs">
             <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -55,7 +52,7 @@
               <polyline points="7 10 12 15 17 10"/>
               <line x1="12" y1="15" x2="12" y2="3"/>
             </svg>
-            <span>Sub</span>
+            <span>لینک سابسکریپشن</span>
           </a>
           <a href="#/nodes" class="nav-tab" data-page="nodes">
             <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -64,7 +61,7 @@
               <line x1="6" y1="6" x2="6.01" y2="6"/>
               <line x1="6" y1="18" x2="6.01" y2="18"/>
             </svg>
-            <span>Node</span>
+            <span>کانفیگ‌های دستی</span>
           </a>
           <a href="#/usage" class="nav-tab" data-page="usage">
             <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -72,57 +69,34 @@
               <line x1="12" y1="20" x2="12" y2="4"/>
               <line x1="6" y1="20" x2="6" y2="14"/>
             </svg>
-            <span>Usage</span>
+            <span>مصرف و منابع</span>
           </a>
           <a href="#/scanner" class="nav-tab" data-page="scanner">
             <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="11" cy="11" r="8"/>
               <line x1="21" y1="21" x2="16.65" y2="16.65"/>
             </svg>
-            <span>Scanner</span>
-            <span class="tab-pill">BETA</span>
+            <span>اسکنر آی‌پی</span>
           </a>
         </nav>
 
         <!-- Right Actions -->
         <div class="header-actions">
-          <!-- Theme Switcher -->
-          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark / Cozy Theme" title="Toggle Dark / Cozy Theme">
-            <span class="theme-icon-wrap">
-              <svg class="theme-svg icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-              </svg>
-              <svg class="theme-svg icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="5"/>
-                <line x1="12" y1="1" x2="12" y2="3"/>
-                <line x1="12" y1="21" x2="12" y2="23"/>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                <line x1="1" y1="12" x2="3" y2="12"/>
-                <line x1="21" y1="12" x2="23" y2="12"/>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-              </svg>
-            </span>
-            <span class="theme-toggle-label" id="themeToggleLabel">Dark</span>
-          </button>
-
-          <!-- WhiteDNS Sponsor -->
-          <a href="https://t.me/whitedns" target="_blank" rel="noopener" class="header-sponsor-btn" title="Official Sponsor: WhiteDNS">
-            <span class="sponsor-badge">SPONSOR</span>
-            <span class="sponsor-name">WhiteDNS</span>
-          </a>
+          <div class="server-status-pill">
+            <span class="pulse-green-dot"></span>
+            <span id="headerStatusText">سرور فعال</span>
+          </div>
 
           <!-- Telegram Channel -->
-          <a href="https://t.me/sohil" target="_blank" rel="noopener" class="header-social-btn header-tg-link" title="Telegram Channel">
+          <a href="https://t.me/sohil" target="_blank" rel="noopener" class="header-social-btn" title="کانال تلگرام">
             <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
             </svg>
-            <span class="btn-text-hide">Telegram</span>
+            <span>تلگرام</span>
           </a>
 
           <!-- Mobile Hamburger Toggle -->
-          <button type="button" class="hamburger-toggle" id="hamburgerBtn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <button type="button" class="hamburger-toggle" id="hamburgerBtn" aria-label="منوی موبایل" aria-expanded="false" aria-controls="mobileDrawer">
             <span class="bar bar-1"></span>
             <span class="bar bar-2"></span>
             <span class="bar bar-3"></span>
@@ -136,35 +110,30 @@
           <nav class="drawer-nav">
             <a href="#/home" class="drawer-item active" data-page="home">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              <span>Home</span>
+              <span>صفحه اصلی</span>
             </a>
             <a href="#/subs" class="drawer-item" data-page="subs">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              <span>Subscriptions</span>
+              <span>لینک‌های سابسکریپشن</span>
             </a>
             <a href="#/nodes" class="drawer-item" data-page="nodes">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-              <span>Nodes &amp; Configs</span>
+              <span>کانفیگ‌های دستی</span>
             </a>
             <a href="#/usage" class="drawer-item" data-page="usage">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-              <span>Traffic &amp; Resources</span>
+              <span>مصرف و منابع سرور</span>
             </a>
             <a href="#/scanner" class="drawer-item" data-page="scanner">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <span>IP Scanner</span>
-              <span class="tab-pill">BETA</span>
+              <span>اسکنر آی‌پی (Scanner)</span>
             </a>
           </nav>
 
           <div class="drawer-footer">
-            <a href="https://t.me/whitedns" target="_blank" rel="noopener" class="drawer-link drawer-sponsor-link">
-              <span class="sponsor-badge">SPONSOR</span>
-              <span>WhiteDNS Support</span>
-            </a>
             <a href="https://t.me/sohil" target="_blank" rel="noopener" class="drawer-link">
               <svg viewBox="0 0 24 24" fill="currentColor" class="drawer-svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-              <span>Telegram Community</span>
+              <span>کانال تلگرام سهیل</span>
             </a>
           </div>
         </div>
@@ -174,429 +143,346 @@
     <!-- ================= MAIN CONTAINER ================= -->
     <main class="app-main">
 
-      <!-- ================= VIEW 1: HOME ================= -->
+      <!-- ================= VIEW 1: HOME (LANDING PAGE) ================= -->
       <section id="viewHome" class="view-page active">
         <!-- Hero Section -->
-        <div class="hero-card-wrap">
-          <div class="hero-content">
-            <div class="hero-chip">
-              <span class="chip-spark">✦</span>
-              <span>ULTRA-FAST &amp; RESILIENT PROXIES</span>
-            </div>
-            <h1 class="hero-heading">
-              Free <span class="gradient-title">Soheil</span><br>Gate
-            </h1>
-            <p class="hero-description">
-              Next-generation high-speed proxy gateway powered by Sing-box &amp; Xray.<br>
-              Zero logs, single-port multiplexing, and uninterrupted access to the open web.
-            </p>
-            <div class="hero-actions-row">
-              <a href="#/subs" class="btn btn-primary" id="btnHeroGetSub">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="btn-icon">
+        <div class="hero-section">
+          <div class="hero-chip">
+            <span class="chip-dot"></span>
+            <span>سامانه اتصال پرسرعت و پایدار</span>
+          </div>
+          <h1 class="hero-title">سایور</h1>
+          <p class="hero-subtitle">
+            دریافت آسان لینک سابسکریپشن و کانفیگ‌های اختصاصی با بالاترین کیفیت و سرعت، سازگار با تمامی اپلیکیشن‌ها
+          </p>
+        </div>
+
+        <!-- ================= MAIN SUBSCRIPTION CARD ================= -->
+        <div class="smart-card sub-hero-card">
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <div class="card-icon-wrap icon-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span>Get Subscription</span>
-              </a>
-              <a href="#/nodes" class="btn btn-secondary">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="btn-icon">
+              </div>
+              <div>
+                <h2 class="card-heading">لینک هوشمند سابسکریپشن</h2>
+                <div class="card-sub-label">اتصال خودکار و همیشگی به بهترین سرورها</div>
+              </div>
+            </div>
+            <span class="badge-recommended">پیشنهادی • آپدیت خودکار</span>
+          </div>
+
+          <!-- Quick Format Switcher Tabs -->
+          <div class="sub-format-tabs" id="subFormatTabs">
+            <button type="button" class="format-tab active" data-sub="compat">عمومی (v2rayNG / Hiddify)</button>
+            <button type="button" class="format-tab" data-sub="clash">کلش متا (Clash Meta)</button>
+            <button type="button" class="format-tab" data-sub="sb">سینگ‌باکس (Sing-box)</button>
+            <button type="button" class="format-tab" data-sub="raw">لینک خام (Plain Text)</button>
+          </div>
+
+          <!-- Subscription URL Box & Primary Buttons -->
+          <div class="sub-input-container">
+            <div class="url-input-wrap">
+              <input type="text" id="activeSubUrl" readonly dir="ltr" spellcheck="false" class="url-input-field" onclick="this.select();">
+            </div>
+            <div class="sub-primary-actions">
+              <button type="button" class="btn btn-primary" id="btnCopyActiveSub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-svg">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+                <span>کپی لینک سابسکریپشن</span>
+              </button>
+              <button type="button" class="btn btn-secondary" id="btnQrActiveSub" title="نمایش بارکد QR">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-svg">
+                  <rect x="3" y="3" width="7" height="7"/>
+                  <rect x="14" y="3" width="7" height="7"/>
+                  <rect x="14" y="14" width="7" height="7"/>
+                  <rect x="3" y="14" width="7" height="7"/>
+                </svg>
+                <span>بارکد QR</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Compatibility Guidance Tags -->
+          <div class="compat-tags-row">
+            <span class="compat-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mini-svg"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>v2rayNG (اندروید)</span>
+            </span>
+            <span class="compat-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mini-svg"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Hiddify (تمامی سیستم‌عامل‌ها)</span>
+            </span>
+            <span class="compat-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mini-svg"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>v2rayN (ویندوز)</span>
+            </span>
+            <span class="compat-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mini-svg"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Streisand / Shadowrocket (آیفون)</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- ================= MANUAL CONFIGS SECTION ================= -->
+        <div class="smart-card nodes-main-card">
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <div class="card-icon-wrap icon-accent">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
                   <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
                   <line x1="6" y1="6" x2="6.01" y2="6"/>
                   <line x1="6" y1="18" x2="6.01" y2="18"/>
                 </svg>
-                <span>View Node List</span>
-              </a>
+              </div>
+              <div>
+                <h2 class="card-heading">کانفیگ‌های اختصاصی (کپی دستی)</h2>
+                <div class="card-sub-label">کپی یا اسکن تکی هر کانفیگ به صورت دستی</div>
+              </div>
             </div>
+            <button type="button" class="btn btn-secondary btn-sm" id="btnCopyAllConfigs">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-svg"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span>کپی همه کانفیگ‌ها</span>
+            </button>
           </div>
 
-          <div class="hero-visual">
-            <div class="single-hero-card">
-              <div class="card-glow-bg"></div>
-              <img src="/سهیل/home.jpg" alt="Soheil Gate" class="hero-card-img" onerror="if(!this.src.endsWith('/assets/home.jpg') && !this.src.endsWith('/home.jpg')) { this.src='/assets/home.jpg'; } else if (this.src.endsWith('/assets/home.jpg')) { this.src='/home.jpg'; } else { this.parentElement.classList.add('no-img'); }">
-              <div class="hero-card-overlay">
-                <span class="live-dot-pulse"></span>
-                <span class="overlay-brand">Soheil Net &bull; Active Node</span>
-              </div>
+          <!-- Search & Filter Bar -->
+          <div class="filter-controls-bar">
+            <div class="search-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-svg"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="nodeSearchInput" class="search-field" placeholder="جستجو در کانفیگ‌ها یا پروتکل‌ها..." spellcheck="false">
             </div>
-          </div>
-        </div>
-
-        <!-- Server Status Card -->
-        <div class="glass-card status-overview-card">
-          <div class="status-left">
-            <div class="status-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="loc-pin-svg">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-            </div>
-            <div class="status-details">
-              <div class="status-sub-label">AUTO-DETECTED GATEWAY LOCATION</div>
-              <h3 class="status-location-name" id="homeLocation">Detecting Server Location...</h3>
-              <div class="proto-badges-row">
-                <span class="badge-online">
-                  <span class="pulse-green-dot"></span>
-                  <span>Online &amp; Active</span>
-                </span>
-                <span class="proto-pill proto-vless">VLESS</span>
-                <span class="proto-pill proto-vmess">VMess</span>
-                <span class="proto-pill proto-trojan">Trojan</span>
-                <span class="proto-pill proto-ss">Shadowsocks</span>
-                <span class="proto-pill proto-reality">Reality</span>
-                <span class="proto-pill proto-grpc">gRPC</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="status-right">
-            <div class="quick-telemetry">
-              <div class="telemetry-item">
-                <span class="tel-label">PORT</span>
-                <strong class="tel-val" id="homePort">--</strong>
-              </div>
-              <div class="telemetry-item">
-                <span class="tel-label">UPTIME</span>
-                <strong class="tel-val" id="homeUptime">--</strong>
-              </div>
-            </div>
-            <a href="#/nodes" class="btn btn-glass-arrow">
-              <span>Explore Configs</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-svg"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Features Grid -->
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feat-icon-box feat-red">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            </div>
-            <div class="feat-info">
-              <h4 class="feat-title">High Speed &amp; Low Latency</h4>
-              <p class="feat-desc">BBR congestion control optimized for 4K streams and lag-free gaming.</p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feat-icon-box feat-blue">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-            </div>
-            <div class="feat-info">
-              <h4 class="feat-title">Full Privacy &amp; Zero Logs</h4>
-              <p class="feat-desc">End-to-end TLS 1.3 encryption with strict zero user logging policy.</p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feat-icon-box feat-purple">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <div class="feat-info">
-              <h4 class="feat-title">Multiplexed Port</h4>
-              <p class="feat-desc">All protocols routed over a single clean port (443 / 8080).</p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feat-icon-box feat-emerald">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </div>
-            <div class="feat-info">
-              <h4 class="feat-title">100% Free &amp; Open</h4>
-              <p class="feat-desc">Crafted with care by Soheil Net for internet freedom.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- ================= VIEW 2: SUBSCRIPTIONS ================= -->
-      <section id="viewSubs" class="view-page">
-        <div class="glass-card subs-container-card">
-          <div class="section-top-row">
-            <div class="section-title-wrap">
-              <span class="red-bar-indicator"></span>
-              <h2 class="section-heading">Subscription Links</h2>
-            </div>
-            <div class="server-status-tag">
-              <span class="status-dot"></span>
-              <span id="statEngines">sing-box + xray</span>
-            </div>
-          </div>
-          <p class="subs-caption">
-            One-click import into v2rayN, v2rayNG, Hiddify, Clash Verge, Streisand, Sing-box, or Shadowrocket.
-          </p>
-
-          <!-- Protocol Selector -->
-          <div class="proto-selector-wrap">
-            <span class="proto-label">Subscription Protocol Mode:</span>
-            <div class="proto-toggle-group">
-              <button type="button" id="btnProtoHttp" class="proto-btn active" title="Best for v2rayN (Windows), Hiddify, and direct IP">
-                <span class="proto-dot"></span>
-                <span>HTTP (v2rayN / Windows Ready)</span>
-              </button>
-              <button type="button" id="btnProtoHttps" class="proto-btn" title="For SSL reverse proxy or custom domain">
-                <span class="proto-dot"></span>
-                <span>HTTPS (SSL Proxy)</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Compatibility Notice Banner -->
-          <div class="v2rayng-notice-banner">
-            <div class="notice-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </div>
-            <div class="notice-content">
-              <strong>Android v2rayNG:</strong> Switch to <strong>HTTPS sub</strong> if HTTP fails (Android blocks cleartext HTTP by default). For v2rayN on Windows with raw IP:port, use <strong>HTTP</strong>.
-            </div>
-          </div>
-
-          <!-- Server Metrics Strip -->
-          <div class="server-metrics-strip">
-            <div class="metric-box">
-              <span class="metric-label">Location</span>
-              <strong class="metric-val" id="statLocation">Detecting...</strong>
-            </div>
-            <div class="metric-box">
-              <span class="metric-label">Port</span>
-              <strong class="metric-val" id="statPort">--</strong>
-            </div>
-            <div class="metric-box">
-              <span class="metric-label">Host / IP</span>
-              <strong class="metric-val" id="statHost">--</strong>
-            </div>
-            <div class="metric-box">
-              <span class="metric-label">Uptime</span>
-              <strong class="metric-val" id="statUptime">--</strong>
-            </div>
-          </div>
-
-          <!-- Subscriptions List -->
-          <div class="sub-items-list">
-            <!-- 1. Main Compat Sub (Recommended) -->
-            <div class="sub-row-card">
-              <div class="sub-meta-header">
-                <span class="badge-recommended">Recommended</span>
-                <strong class="sub-client-name">Universal Compatible (v2rayN / v2rayNG / Hiddify / Streisand)</strong>
-                <span class="sub-compat-badge" id="compatBadge">(v2rayN / Windows Ready)</span>
-              </div>
-              <div class="sub-action-group">
-                <input type="text" id="urlSubCompat" readonly spellcheck="false" onclick="this.select();">
-                <button type="button" class="btn-copy" data-action="copy-input" data-target="urlSubCompat">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="copy-svg"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy Sub</span>
-                </button>
-                <button type="button" class="btn-qr" data-action="qr-input" data-target="urlSubCompat" title="Scan QR Code">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="qr-svg"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                  <span>QR</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- 2. Plain-text raw subscription -->
-            <div class="sub-row-card">
-              <div class="sub-meta-header">
-                <span class="badge-raw">Raw Links</span>
-                <strong class="sub-client-name">Plain-Text Config Links</strong>
-                <span class="sub-compat-badge">(Unencoded subscription)</span>
-              </div>
-              <div class="sub-action-group">
-                <input type="text" id="urlSubRaw" readonly spellcheck="false" onclick="this.select();">
-                <button type="button" class="btn-copy" data-action="copy-input" data-target="urlSubRaw">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="copy-svg"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy Raw</span>
-                </button>
-                <button type="button" class="btn-qr" data-action="qr-input" data-target="urlSubRaw" title="Scan QR Code">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="qr-svg"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                  <span>QR</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- 3. Clash Meta / Mihomo -->
-            <div class="sub-row-card">
-              <div class="sub-meta-header">
-                <span class="badge-clash">Clash Meta / Mihomo</span>
-                <strong class="sub-client-name">Clash Verge Rev / Flclash / Mihomo Party</strong>
-              </div>
-              <div class="sub-action-group">
-                <input type="text" id="urlClash" readonly spellcheck="false" onclick="this.select();">
-                <button type="button" class="btn-copy" data-action="copy-input" data-target="urlClash">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="copy-svg"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy Clash</span>
-                </button>
-                <button type="button" class="btn-qr" data-action="qr-input" data-target="urlClash" title="Scan QR Code">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="qr-svg"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                  <span>QR</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- 4. Sing-box Client Outbounds -->
-            <div class="sub-row-card">
-              <div class="sub-meta-header">
-                <span class="badge-singbox">Sing-box Client</span>
-                <strong class="sub-client-name">Sing-box JSON Outbounds</strong>
-              </div>
-              <div class="sub-action-group">
-                <input type="text" id="urlSb" readonly spellcheck="false" onclick="this.select();">
-                <button type="button" class="btn-copy" data-action="copy-input" data-target="urlSb">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="copy-svg"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy URL</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- 5. Full Advanced Subscription -->
-            <div class="sub-row-card">
-              <div class="sub-meta-header">
-                <span class="badge-advanced">Full Advanced</span>
-                <strong class="sub-client-name">All Protocols (Advanced Outbounds)</strong>
-              </div>
-              <div class="sub-action-group">
-                <input type="text" id="urlSubFull" readonly spellcheck="false" onclick="this.select();">
-                <button type="button" class="btn-copy" data-action="copy-input" data-target="urlSubFull">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="copy-svg"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy Full</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- 6. WireGuard Configuration -->
-            <div class="sub-row-card" id="subRowWg">
-              <div class="sub-meta-header">
-                <span class="badge-wg">WireGuard</span>
-                <strong class="sub-client-name">WireGuard Configuration Profile (.conf)</strong>
-              </div>
-              <div class="sub-action-group">
-                <input type="text" id="urlWgConf" readonly spellcheck="false" onclick="this.select();">
-                <button type="button" class="btn-copy" data-action="copy-input" data-target="urlWgConf">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="copy-svg"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy URL</span>
-                </button>
-                <a href="/سهیل/wg.conf" id="btnDownloadWg" download="wg0.conf" class="btn-download">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="dl-svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                  <span>Download</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- ================= VIEW 3: NODES ================= -->
-      <section id="viewNodes" class="view-page">
-        <div class="glass-card nodes-container-card">
-          <div class="section-top-row">
-            <div class="section-title-wrap">
-              <span class="red-bar-indicator"></span>
-              <h2 class="section-heading">Available Nodes &amp; Configs</h2>
-            </div>
-            <div class="server-status-tag">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="location-mini-svg">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              <span id="nodesLocation">Detecting...</span>
-            </div>
-          </div>
-          <p class="subs-caption">
-            Copy direct config links or scan QR codes individually into v2rayNG, v2rayN, or Hiddify.
-          </p>
-
-          <!-- Search & Filter Controls -->
-          <div class="nodes-filter-bar">
-            <div class="search-input-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <input type="text" id="nodeSearchInput" class="node-search-box" placeholder="Filter by protocol or node name..." spellcheck="false">
-            </div>
-            <div class="filter-pills-row" id="protoFilterGroup">
-              <button type="button" class="filter-pill active" data-filter="all">All</button>
+            <div class="filter-pills" id="protoFilterGroup">
+              <button type="button" class="filter-pill active" data-filter="all">همه</button>
               <button type="button" class="filter-pill" data-filter="vless">VLESS</button>
               <button type="button" class="filter-pill" data-filter="vmess">VMess</button>
               <button type="button" class="filter-pill" data-filter="trojan">Trojan</button>
               <button type="button" class="filter-pill" data-filter="ss">Shadowsocks</button>
-              <button type="button" class="filter-pill" data-filter="wg">WireGuard</button>
             </div>
           </div>
 
-          <!-- Dynamic Node Cards Grid -->
-          <div id="nodesContainer" class="nodes-grid">
-            <div class="nodes-loading">
-              <span class="spinner"></span>
-              <span>Loading available nodes...</span>
+          <!-- Dynamic Config Cards Grid -->
+          <div id="nodesContainer" class="nodes-grid-layout">
+            <div class="loading-state">
+              <span class="loading-spinner"></span>
+              <span>در حال بارگذاری لیست کانفیگ‌ها...</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= SERVER OVERVIEW STRIP ================= -->
+        <div class="telemetry-grid">
+          <div class="telemetry-card">
+            <div class="telemetry-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="telemetry-meta">
+              <div class="telemetry-label">موقعیت سرور</div>
+              <div class="telemetry-val" id="homeLocation">آلمان (Germany)</div>
+            </div>
+          </div>
+          <div class="telemetry-card">
+            <div class="telemetry-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="telemetry-meta">
+              <div class="telemetry-label">مدت فعالیت سرور</div>
+              <div class="telemetry-val" id="homeUptime">--</div>
+            </div>
+          </div>
+          <div class="telemetry-card">
+            <div class="telemetry-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="telemetry-meta">
+              <div class="telemetry-label">پورت اتصال</div>
+              <div class="telemetry-val" id="homePort">443</div>
+            </div>
+          </div>
+          <div class="telemetry-card">
+            <div class="telemetry-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div class="telemetry-meta">
+              <div class="telemetry-label">رمزنگاری و امنیت</div>
+              <div class="telemetry-val">TLS 1.3 اختصاصی</div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ================= VIEW 2: SUBSCRIPTIONS DETAILED ================= -->
+      <section id="viewSubs" class="view-page">
+        <div class="smart-card">
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <h2 class="card-heading">تمامی فرمت‌های سابسکریپشن</h2>
+              <div class="card-sub-label">انتخاب فرمت متناسب با نرم‌افزار مورد نظر شما</div>
+            </div>
+            <!-- Protocol mode toggle for older Windows v2rayN clients -->
+            <div class="proto-toggle-group">
+              <button type="button" id="btnProtoHttps" class="proto-btn active">HTTPS (پیش‌فرض)</button>
+              <button type="button" id="btnProtoHttp" class="proto-btn">HTTP (کلاینت‌های قدیمی)</button>
+            </div>
+          </div>
+
+          <div class="sub-items-stack">
+            <!-- 1. Universal Base64 -->
+            <div class="sub-item-card">
+              <div class="sub-item-header">
+                <span class="badge-recommended">عمومی (پیشنهادی)</span>
+                <strong>سابسکریپشن استاندارد v2rayNG / Hiddify / Streisand</strong>
+              </div>
+              <div class="sub-input-group">
+                <input type="text" id="urlSubCompat" readonly dir="ltr" spellcheck="false" onclick="this.select();">
+                <button type="button" class="btn btn-primary btn-sm" data-action="copy-input" data-target="urlSubCompat">کپی ساب</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-action="qr-input" data-target="urlSubCompat">کد QR</button>
+              </div>
+            </div>
+
+            <!-- 2. Clash Meta YAML -->
+            <div class="sub-item-card">
+              <div class="sub-item-header">
+                <span class="badge-clash">Clash Meta</span>
+                <strong>پیکربندی هوشمند کلش متا (Mihomo / Clash Verge)</strong>
+              </div>
+              <div class="sub-input-group">
+                <input type="text" id="urlClash" readonly dir="ltr" spellcheck="false" onclick="this.select();">
+                <button type="button" class="btn btn-primary btn-sm" data-action="copy-input" data-target="urlClash">کپی ساب کلش</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-action="qr-input" data-target="urlClash">کد QR</button>
+              </div>
+            </div>
+
+            <!-- 3. Sing-box JSON -->
+            <div class="sub-item-card">
+              <div class="sub-item-header">
+                <span class="badge-singbox">Sing-box</span>
+                <strong>خروجی اختصاصی سینگ‌باکس (Sing-box Client JSON)</strong>
+              </div>
+              <div class="sub-input-group">
+                <input type="text" id="urlSb" readonly dir="ltr" spellcheck="false" onclick="this.select();">
+                <button type="button" class="btn btn-primary btn-sm" data-action="copy-input" data-target="urlSb">کپی ساب سینگ‌باکس</button>
+              </div>
+            </div>
+
+            <!-- 4. Raw Links -->
+            <div class="sub-item-card">
+              <div class="sub-item-header">
+                <span class="badge-raw">لینک‌های خام متنی</span>
+                <strong>متن مستقیم کانفیگ‌ها (Plain Text)</strong>
+              </div>
+              <div class="sub-input-group">
+                <input type="text" id="urlSubRaw" readonly dir="ltr" spellcheck="false" onclick="this.select();">
+                <button type="button" class="btn btn-primary btn-sm" data-action="copy-input" data-target="urlSubRaw">کپی لینک خام</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-action="qr-input" data-target="urlSubRaw">کد QR</button>
+              </div>
+            </div>
+
+            <!-- 5. Advanced Sub -->
+            <div class="sub-item-card">
+              <div class="sub-item-header">
+                <span class="badge-advanced">پیشرفته</span>
+                <strong>تمامی پروتکل‌ها (Full Protocols)</strong>
+              </div>
+              <div class="sub-input-group">
+                <input type="text" id="urlSubFull" readonly dir="ltr" spellcheck="false" onclick="this.select();">
+                <button type="button" class="btn btn-primary btn-sm" data-action="copy-input" data-target="urlSubFull">کپی ساب کامل</button>
+              </div>
+            </div>
+
+            <!-- 6. WireGuard Conf -->
+            <div class="sub-item-card" id="subRowWg">
+              <div class="sub-item-header">
+                <span class="badge-wg">WireGuard</span>
+                <strong>پروفایل وایرگارد (.conf)</strong>
+              </div>
+              <div class="sub-input-group">
+                <input type="text" id="urlWgConf" readonly dir="ltr" spellcheck="false" onclick="this.select();">
+                <button type="button" class="btn btn-primary btn-sm" data-action="copy-input" data-target="urlWgConf">کپی لینک</button>
+                <a href="/سهیل/wg.conf" id="btnDownloadWg" download="wg0.conf" class="btn btn-secondary btn-sm">دانلود فایل conf</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= VIEW 3: NODES (STANDALONE TAB) ================= -->
+      <section id="viewNodes" class="view-page">
+        <div class="smart-card">
+          <div class="card-header-row">
+            <div>
+              <h2 class="card-heading">لیست کانفیگ‌های فعال</h2>
+              <div class="card-sub-label">موقعیت: <span id="nodesLocation">آلمان (Germany)</span></div>
+            </div>
+          </div>
+          <div id="nodesContainerCopy" class="nodes-grid-layout">
+            <!-- Mirrored dynamically from nodesContainer -->
+          </div>
+        </div>
+      </section>
 
       <!-- ================= VIEW 4: USAGE & RESOURCES ================= -->
       <section id="viewUsage" class="view-page">
-        <!-- Hardware Resources Section -->
-        <div class="glass-card subs-container-card shu shr">
-          <div class="section-top-row">
-            <div class="section-title-wrap">
-              <span class="red-bar-indicator"></span>
-              <h2 class="section-heading">Server Hardware Resources</h2>
+        <!-- Hardware Telemetry -->
+        <div class="smart-card shu shr">
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <h2 class="card-heading">منابع سخت‌افزاری سرور</h2>
+              <span id="shrStatus" class="shu-muted" role="status" aria-live="polite">در حال بررسی...</span>
             </div>
-            <span id="shrStatus" class="shu-muted" role="status" aria-live="polite">Loading telemetry...</span>
           </div>
           <div class="shr-grid">
             <div class="shu-card">
-              <div class="shu-card-label">CPU</div>
-              <div class="shu-card-total" id="shrCpu">Sampling...</div>
-              <meter id="shrCpuBar" min="0" max="100" value="0" aria-label="CPU usage" hidden></meter>
-              <div class="shu-card-split" id="shrCpuInfo">Waiting for sample</div>
+              <div class="shu-card-label">پردازنده (CPU)</div>
+              <div class="shu-card-total" id="shrCpu">در حال بررسی...</div>
+              <meter id="shrCpuBar" min="0" max="100" value="0" hidden></meter>
+              <div class="shu-card-split" id="shrCpuInfo"></div>
             </div>
             <div class="shu-card">
-              <div class="shu-card-label">RAM</div>
+              <div class="shu-card-label">حافظه رم (RAM)</div>
               <div class="shu-card-total" id="shrRam">&ndash;</div>
-              <meter id="shrRamBar" min="0" max="100" value="0" aria-label="RAM usage" hidden></meter>
+              <meter id="shrRamBar" min="0" max="100" value="0" hidden></meter>
               <div class="shu-card-split" id="shrRamInfo"></div>
             </div>
             <div class="shu-card">
-              <div class="shu-card-label">App Storage</div>
+              <div class="shu-card-label">فضای ذخیره‌سازی</div>
               <div class="shu-card-total" id="shrDisk">&ndash;</div>
-              <meter id="shrDiskBar" min="0" max="100" value="0" aria-label="Storage usage" hidden></meter>
+              <meter id="shrDiskBar" min="0" max="100" value="0" hidden></meter>
               <div class="shu-card-split" id="shrDiskInfo"></div>
             </div>
             <div class="shu-card">
-              <div class="shu-card-label">Days Left <span class="shu-muted">(Saved Expiry)</span></div>
-              <div class="shu-card-total" id="shrDays">Not provided</div>
+              <div class="shu-card-label">روزهای باقیمانده</div>
+              <div class="shu-card-total" id="shrDays">نامحدود</div>
               <div class="shu-card-split" id="shrExpiry"></div>
             </div>
             <div class="shu-card">
-              <div class="shu-card-label">Credit <span class="shu-muted">(Balance)</span></div>
-              <div class="shu-card-total" id="shrCredit">Not provided</div>
-              <div class="shu-card-split" id="shrCreditInfo">Host billing is not connected</div>
+              <div class="shu-card-label">اعتبار</div>
+              <div class="shu-card-total" id="shrCredit">فعال</div>
+              <div class="shu-card-split" id="shrCreditInfo">سرویس فعال است</div>
             </div>
           </div>
-          <p class="subs-caption shr-caption">
-            Resources refresh automatically every 5 seconds while this tab is active. Storage counts app data files.
-          </p>
         </div>
 
-        <!-- Bandwidth & Traffic Section -->
-        <div class="glass-card subs-container-card shu">
-          <div class="section-top-row">
-            <div class="section-title-wrap">
-              <span class="red-bar-indicator"></span>
-              <h2 class="section-heading">Bandwidth &amp; Traffic Usage</h2>
+        <!-- Bandwidth & Traffic -->
+        <div class="smart-card shu">
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <h2 class="card-heading">مصرف ترافیک و پهنای باند</h2>
+              <div class="card-sub-label">مجموع آپلود و دانلود در تمامی کانفیگ‌ها</div>
             </div>
-            <div class="server-status-tag shu-live" title="Live speed across all configs">
-              <span class="status-dot"></span>
-              <span>&uarr; <b id="shuLiveUp">0 B/s</b> &nbsp; &darr; <b id="shuLiveDown">0 B/s</b></span>
+            <div class="traffic-live-badge">
+              <span>↑ <b id="shuLiveUp">0 B/s</b></span>
+              <span>•</span>
+              <span>↓ <b id="shuLiveDown">0 B/s</b></span>
             </div>
           </div>
-          <p class="subs-caption">
-            Total proxy traffic passing through all configs (upload + download). Resets on the 1st of each month (UTC).
-          </p>
 
           <div class="shu-limit" id="shuLimit" hidden>
             <div class="shu-limit-top">
@@ -609,42 +495,42 @@
 
           <div class="shu-cards">
             <div class="shu-card">
-              <div class="shu-card-label">Today <span class="shu-muted">(UTC)</span></div>
+              <div class="shu-card-label">مصرف امروز (UTC)</div>
               <div class="shu-card-total" id="shuDayTotal">&ndash;</div>
               <div class="shu-card-split">
-                <span>&uarr; <b id="shuDayUp">&ndash;</b></span>
-                <span>&darr; <b id="shuDayDown">&ndash;</b></span>
+                <span>↑ <b id="shuDayUp">&ndash;</b></span>
+                <span>↓ <b id="shuDayDown">&ndash;</b></span>
               </div>
             </div>
             <div class="shu-card">
-              <div class="shu-card-label">This Month <span class="shu-muted" id="shuMonthKey"></span></div>
+              <div class="shu-card-label">مصرف این ماه <span class="shu-muted" id="shuMonthKey"></span></div>
               <div class="shu-card-total" id="shuMonthTotal">&ndash;</div>
               <div class="shu-card-split">
-                <span>&uarr; <b id="shuMonthUp">&ndash;</b></span>
-                <span>&darr; <b id="shuMonthDown">&ndash;</b></span>
+                <span>↑ <b id="shuMonthUp">&ndash;</b></span>
+                <span>↓ <b id="shuMonthDown">&ndash;</b></span>
               </div>
             </div>
             <div class="shu-card">
-              <div class="shu-card-label">All Time</div>
+              <div class="shu-card-label">مصرف کل (All Time)</div>
               <div class="shu-card-total" id="shuAllTotal">&ndash;</div>
               <div class="shu-card-split">
-                <span>&uarr; <b id="shuAllUp">&ndash;</b></span>
-                <span>&darr; <b id="shuAllDown">&ndash;</b></span>
+                <span>↑ <b id="shuAllUp">&ndash;</b></span>
+                <span>↓ <b id="shuAllDown">&ndash;</b></span>
               </div>
             </div>
           </div>
 
-          <div class="shu-table-wrap">
+          <div class="table-container">
             <table class="shu-table">
               <thead>
                 <tr>
-                  <th>Config</th>
-                  <th>Live</th>
-                  <th>Today</th>
-                  <th>Month &uarr;</th>
-                  <th>Month &darr;</th>
-                  <th>Month Total</th>
-                  <th>All Time</th>
+                  <th>کانفیگ</th>
+                  <th>سرعت زنده</th>
+                  <th>امروز</th>
+                  <th>ماه ↑</th>
+                  <th>ماه ↓</th>
+                  <th>مجموع ماه</th>
+                  <th>کل مصرف</th>
                 </tr>
               </thead>
               <tbody id="shuRows"></tbody>
@@ -652,106 +538,97 @@
             </table>
           </div>
 
-          <div class="shu-note">
-            <b>Note:</b> Traffic values are estimated inside the panel. Your hosting dashboard is the authoritative billing source. Data persists across restarts if using persistent volume.
-          </div>
-
           <div class="shu-actions">
             <div class="shu-sync">
-              <span>Sync this month with hosting dashboard:</span>
-              <input id="shuSyncGb" type="number" min="0" step="0.01" inputmode="decimal" placeholder="GiB used" aria-label="GiB used this month">
-              <button type="button" id="shuSyncBtn" class="shu-btn">Set</button>
+              <span>تنظیم میزان مصرف ماه:</span>
+              <input id="shuSyncGb" type="number" min="0" step="0.01" inputmode="decimal" placeholder="GiB">
+              <button type="button" id="shuSyncBtn" class="btn btn-secondary btn-sm">ثبت</button>
             </div>
-            <button type="button" id="shuResetBtn" class="shu-btn shu-btn-soft">Reset Counter</button>
+            <button type="button" id="shuResetBtn" class="btn btn-secondary btn-sm">ریست شمارنده</button>
           </div>
           <div class="shu-foot-meta" id="shuMeta"></div>
         </div>
       </section>
 
-
       <!-- ================= VIEW 5: INGRESS SCANNER ================= -->
       <section id="viewScanner" class="view-page">
-        <div class="glass-card subs-container-card shs">
-          <div class="section-top-row">
-            <div class="section-title-wrap">
-              <span class="red-bar-indicator"></span>
-              <h2 class="section-heading">Ingress IP Scanner</h2>
+        <div class="smart-card shs">
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <h2 class="card-heading">اسکنر آی‌پی‌های جایگزین (Ingress Scanner)</h2>
+              <div class="card-sub-label">تست آی‌پی‌های تمیز و بدون فیلتر برای <strong id="shsDomain">سرور</strong></div>
             </div>
-            <span class="shs-badge">Experimental</span>
+            <span class="badge-experimental">آزمایشی</span>
           </div>
-          <p class="subs-caption">
-            Test clean alternative ingress IPs for <strong id="shsDomain">your app</strong>. Each candidate must pass TLS, WebSocket handshake, and an authenticated VLESS request. Ports are fixed to 443.
-          </p>
+
           <form id="shsForm">
-            <label class="shs-label" for="shsIps">Candidate Public IPs <span class="shu-muted">(optional, maximum 32)</span></label>
-            <textarea id="shsIps" rows="4" maxlength="4096" spellcheck="false" placeholder="One public IPv4 or IPv6 address per line. Leave empty to use DNS discovery."></textarea>
-            <div class="shs-toolbar">
-              <label class="shs-check">
+            <label class="form-label" for="shsIps">آی‌پی‌های مورد نظر برای بررسی (اختیاری، حداکثر ۳۲ عدد):</label>
+            <textarea id="shsIps" rows="3" maxlength="4096" spellcheck="false" class="form-textarea" placeholder="در هر سطر یک آی‌پی عمومی وارد کنید. در صورت خالی بودن، به صورت خودکار شناسایی می‌شود."></textarea>
+            <div class="scanner-actions-bar">
+              <label class="check-label">
                 <input type="checkbox" id="shsDiscover" checked>
-                <span>Discover IPs through system DNS, Cloudflare, and Google DNS</span>
+                <span>کشف خودکار آی‌پی‌ها از Cloudflare و Google DNS</span>
               </label>
-              <div class="shs-buttons">
-                <button type="submit" class="shu-btn" id="shsStart">Start Scan</button>
-                <button type="button" class="shu-btn shu-btn-soft" id="shsCancel" disabled>Cancel</button>
+              <div class="btn-group">
+                <button type="submit" class="btn btn-primary btn-sm" id="shsStart">شروع اسکن</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="shsCancel" disabled>لغو</button>
               </div>
             </div>
           </form>
-          <p class="shs-note">
-            Results measure reachability from this server. A verified address can change or stop working later; test copied configs from your own local network.
-          </p>
-          <div class="shs-progress">
-            <span id="shsStatus" role="status" aria-live="polite">Ready to scan</span>
-            <strong id="shsCount">0 verified</strong>
+
+          <div class="scan-progress-strip">
+            <span id="shsStatus" role="status" aria-live="polite">آماده برای اسکن</span>
+            <strong id="shsCount">۰ تایید شده</strong>
           </div>
           <p id="shsNotes" class="shu-muted"></p>
-          <div class="shu-table-wrap">
+
+          <div class="table-container">
             <table class="shu-table shs-table">
               <thead>
                 <tr>
-                  <th>IP Address</th>
-                  <th>Result</th>
-                  <th>WS Handshake</th>
-                  <th>Proxy Test</th>
-                  <th>Config</th>
+                  <th>آدرس آی‌پی</th>
+                  <th>نتیجه</th>
+                  <th>هندشیک WS</th>
+                  <th>تست پروکسی</th>
+                  <th>کانفیگ</th>
                 </tr>
               </thead>
               <tbody id="shsRows">
-                <tr><td colspan="5">Start a scan to see results.</td></tr>
+                <tr><td colspan="5">برای شروع روی «شروع اسکن» کلیک کنید.</td></tr>
               </tbody>
             </table>
           </div>
-          <div class="shs-toolbar shs-export">
-            <label>Result Protocol:
-              <select id="shsProtocol">
+
+          <div class="scanner-export-row">
+            <label class="export-proto-label">پروتکل خروجی:
+              <select id="shsProtocol" class="select-field">
                 <option value="VLESS-WS-TLS">VLESS WS TLS</option>
                 <option value="VMess-WS-TLS">VMess WS TLS</option>
                 <option value="Trojan-WS-TLS">Trojan WS TLS</option>
               </select>
             </label>
-            <button type="button" class="shu-btn" id="shsCopyAll" disabled>Copy Verified Configs</button>
+            <button type="button" class="btn btn-primary btn-sm" id="shsCopyAll" disabled>کپی تمام کانفیگ‌های تایید شده</button>
           </div>
-          <textarea id="shsOutput" rows="4" readonly spellcheck="false" aria-label="Verified IP configs" placeholder="Configs appear here after an IP is verified."></textarea>
-          <p class="shu-muted shs-note">
-            Exported configs use the IP as connection address and retain app domain for TLS SNI and WebSocket Host.
-          </p>
+          <textarea id="shsOutput" rows="3" readonly dir="ltr" spellcheck="false" class="form-textarea" placeholder="کانفیگ‌های سالم پس از اتمام تست در این بخش قرار می‌گیرند."></textarea>
         </div>
       </section>
 
     </main>
 
+    <!-- Hidden compatibility span metrics for backwards compatibility with JS -->
+    <div style="display:none;" aria-hidden="true">
+      <span id="compatBadge"></span>
+      <span id="statLocation"></span>
+      <span id="statPort"></span>
+      <span id="statHost"></span>
+      <span id="statUptime"></span>
+      <span id="statEngines"></span>
+    </div>
+
     <!-- ================= FOOTER ================= -->
     <footer class="app-footer">
-      <div class="footer-content">
-        <div class="footer-links">
-          <span class="footer-brand-title">Soheil Gate</span>
-          <span class="footer-sep">&bull;</span>
-          <a href="https://t.me/whitedns" target="_blank" rel="noopener" class="footer-link">Sponsor: WhiteDNS</a>
-          <span class="footer-sep">&bull;</span>
-          <a href="https://t.me/sohil" target="_blank" rel="noopener" class="footer-link">Telegram Channel</a>
-        </div>
-        <div class="footer-copy">
-          Stream Without Limits &bull; Self-hosted panel &bull; Soheil Net
-        </div>
+      <div class="footer-container">
+        <div class="footer-credit">ساخته شده توسط سهیل یزدانی</div>
       </div>
     </footer>
   </div>
@@ -760,23 +637,23 @@
   <nav class="mobile-nav-bar" id="mobileNav">
     <a href="#/home" class="mob-link active" data-page="home">
       <svg class="mob-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      <span>Home</span>
+      <span>اصلی</span>
     </a>
     <a href="#/subs" class="mob-link" data-page="subs">
       <svg class="mob-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      <span>Sub</span>
+      <span>ساب</span>
     </a>
     <a href="#/nodes" class="mob-link" data-page="nodes">
       <svg class="mob-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-      <span>Node</span>
+      <span>نودها</span>
     </a>
     <a href="#/usage" class="mob-link" data-page="usage">
       <svg class="mob-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-      <span>Usage</span>
+      <span>مصرف</span>
     </a>
     <a href="#/scanner" class="mob-link" data-page="scanner">
       <svg class="mob-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <span>Scanner</span>
+      <span>اسکنر</span>
     </a>
   </nav>
 
@@ -784,12 +661,12 @@
   <div id="qrModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="qrModalTitle">
     <div class="modal-dialog">
       <div class="modal-header">
-        <h3 id="qrModalTitle" class="modal-title">Scan QR Code</h3>
-        <button type="button" class="btn-modal-close" id="qrCloseBtn" aria-label="Close modal">&times;</button>
+        <h3 id="qrModalTitle" class="modal-title">اسکن بارکد QR</h3>
+        <button type="button" class="btn-modal-close" id="qrCloseBtn" aria-label="بستن پنجره">&times;</button>
       </div>
       <div class="modal-body">
         <div id="qrcodeWrapper" class="qr-canvas-wrap"></div>
-        <p class="qr-hint">Scan with v2rayN, v2rayNG, Hiddify, or Streisand.</p>
+        <p class="qr-hint">با دوربین گوشی یا نرم‌افزارهای v2rayNG و Hiddify اسکن کنید.</p>
       </div>
     </div>
   </div>
