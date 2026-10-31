@@ -1,10 +1,11 @@
 {
-  "name": "سهیل",
+  "name": "soheil-gate",
   "version": "1.0.0",
-  "description": "سهیل Gate - multi-protocol proxy and web panel (Meera Solution edition)",
+  "description": "Soheil Gate - multi-protocol proxy and web panel (Meera Solution edition)",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node tests/scanner.cjs"
   },
   "dependencies": {
     "axios": "^1.7.7",
@@ -15,6 +16,6 @@
   "engines": {
     "node": ">=18"
   },
-  "author": "سهیل Net",
+  "author": "Soheil Net",
   "license": "MIT"
 }
